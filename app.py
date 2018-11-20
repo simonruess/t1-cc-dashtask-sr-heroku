@@ -36,7 +36,7 @@ app.layout = html.Div([
     html.Div([
         html.H1(
             children = 'Task 1',
-                style = {'font-family': 'Arial, Helvetica, sans-serif'}
+                style = {'font-family': 'Arial, Helvetica, sans-serif', 'text-align': 'center'}
         ),
         html.Div([
             html.P(
@@ -119,7 +119,7 @@ app.layout = html.Div([
         html.Div([
             html.P(
                 children = 'Select an indicator:',
-                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif', 'text-align': 'center'}
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             ),
             dcc.Dropdown(
                 id = 'yaxis-column2',
