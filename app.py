@@ -11,9 +11,7 @@ import pandas as pd
 server = flask.Flask(__name__)
 server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 
-external_stylesheets = ['https://raw.githubusercontent.com/simonruess/t1-cc-dashtask-sr-heroku/master/assets/typography.css']
-
-app = dash.Dash(__name__, server = server, external_stylesheets = external_stylesheets)
+app = dash.Dash(__name__, server = server)
 
 data = pd.read_csv('nama_10_gdp/nama_10_gdp_1_Data.csv', error_bad_lines = False, engine = 'python', na_values = [':', 'NaN'])
 
@@ -37,40 +35,47 @@ available_countries = data['GEO'].unique()
 app.layout = html.Div([
     html.Div([
         html.H1(
-            children = 'Task 1'
+            children = 'Task 1',
+                style = {'font-family': 'Arial, Helvetica, sans-serif'}
         ),
         html.Div([
             html.P(
-                children = 'Select the first indicator:'
+                children = 'Select the first indicator:',
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             ),
             dcc.Dropdown(
                 id = 'xaxis-column1',
                 options = [{'label': i, 'value': i} for i in available_indicators],
-                value = available_indicators[0]
+                value = available_indicators[0],
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             ),
             dcc.RadioItems(
                 id = 'xaxis-type1',
                 options = [{'label': i, 'value': i} for i in ['Linear', 'Log']],
                 value = 'Linear',
-                labelStyle = {'display': 'inline-block'}
+                labelStyle = {'display': 'inline-block'},
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             )
         ],
         style = {'width': '48%', 'display': 'inline-block'}),
 
         html.Div([
             html.P(
-                children = 'Select the second indicator:'
+                children = 'Select the second indicator:',
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             ),
             dcc.Dropdown(
                 id = 'yaxis-column1',
                 options = [{'label': i, 'value': i} for i in available_indicators],
-                value = available_indicators[1]
+                value = available_indicators[1],
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             ),
             dcc.RadioItems(
                 id = 'yaxis-type1',
                 options = [{'label': i, 'value': i} for i in ['Linear', 'Log']],
                 value = 'Linear',
-                labelStyle = {'display': 'inline-block'}
+                labelStyle = {'display': 'inline-block'},
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             )
         ], style = {'width': '48%', 'float': 'right', 'display': 'inline-block'})
     ]),
@@ -95,28 +100,32 @@ app.layout = html.Div([
     html.Div([
         html.H1(
             children = 'Task 2',
-            style = {'text-align': 'center'}
+            style = {'font-family': 'Arial, Helvetica, sans-serif', 'text-align': 'center'}
         ),
         html.Div([
             html.P(
-                children = 'Select a country:'
+                children = 'Select a country:',
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             ),
             dcc.Dropdown(
                 id = 'country2',
                 options = [{'label': i, 'value': i} for i in available_countries],
-                value = available_countries[0]
+                value = available_countries[0],
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             )
         ],
         style = {'width': '48%', 'display': 'inline-block', 'height': '130px'}),
 
         html.Div([
             html.P(
-                children = 'Select an indicator:'
+                children = 'Select an indicator:',
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif', 'text-align': 'center'}
             ),
             dcc.Dropdown(
                 id = 'yaxis-column2',
                 options = [{'label': i, 'value': i} for i in available_indicators],
-                value = available_indicators[0]
+                value = available_indicators[0],
+                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
             )
         ],
         style = {'width': '48%', 'float': 'right', 'display': 'inline-block'})
