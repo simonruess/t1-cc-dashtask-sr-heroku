@@ -11,7 +11,9 @@ import pandas as pd
 server = flask.Flask(__name__)
 server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 
-app = dash.Dash(__name__, server = server)
+external_stylesheets = ['https://raw.githubusercontent.com/simonruess/t1-cc-dashtask-sr-heroku/master/assets/typography.css']
+
+app = dash.Dash(__name__, server = server, external_stylesheets = external_stylesheets)
 
 data = pd.read_csv('nama_10_gdp/nama_10_gdp_1_Data.csv', error_bad_lines = False, engine = 'python', na_values = [':', 'NaN'])
 
