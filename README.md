@@ -1,3 +1,3 @@
-# Cloud Computing: Dash Assignment – Task1
+# Cloud Computing: Dash Assignment
 
-Deployed on Heroku: https://cc-dash-task1-sr.herokuapp.com
+Deployed on Heroku: https://cc-dash-app-sr.herokuapp.com
