@@ -36,7 +36,7 @@ app.layout = html.Div([
     html.Div([
         html.H1(
             children = 'Task 1',
-                style = {'font-family': 'Arial, Helvetica, sans-serif', 'text-align': 'center'}
+            style = {'font-family': 'Arial, Helvetica, sans-serif', 'text-align': 'center'}
         ),
         html.Div([
             html.P(
