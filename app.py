@@ -46,18 +46,16 @@ app.layout = html.Div([
             dcc.Dropdown(
                 id = 'xaxis-column1',
                 options = [{'label': i, 'value': i} for i in available_indicators],
-                value = available_indicators[0],
-                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
+                value = available_indicators[0]
             ),
             dcc.RadioItems(
                 id = 'xaxis-type1',
                 options = [{'label': i, 'value': i} for i in ['Linear', 'Log']],
                 value = 'Linear',
-                labelStyle = {'display': 'inline-block'},
-                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
+                labelStyle = {'display': 'inline-block'}
             )
         ],
-        style = {'width': '48%', 'display': 'inline-block'}),
+        style = {'width': '48%', 'float': 'left', 'display': 'inline-block', 'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}),
 
         html.Div([
             html.P(
@@ -67,17 +65,15 @@ app.layout = html.Div([
             dcc.Dropdown(
                 id = 'yaxis-column1',
                 options = [{'label': i, 'value': i} for i in available_indicators],
-                value = available_indicators[1],
-                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
+                value = available_indicators[1]
             ),
             dcc.RadioItems(
                 id = 'yaxis-type1',
                 options = [{'label': i, 'value': i} for i in ['Linear', 'Log']],
                 value = 'Linear',
-                labelStyle = {'display': 'inline-block'},
-                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
+                labelStyle = {'display': 'inline-block'}
             )
-        ], style = {'width': '48%', 'float': 'right', 'display': 'inline-block'})
+        ], style = {'width': '48%', 'display': 'inline-block', 'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'})
     ]),
 
     dcc.Graph(id = 'indicator-graphic1'),
@@ -110,11 +106,10 @@ app.layout = html.Div([
             dcc.Dropdown(
                 id = 'country2',
                 options = [{'label': i, 'value': i} for i in available_countries],
-                value = available_countries[0],
-                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
+                value = available_countries[0]
             )
         ],
-        style = {'width': '48%', 'display': 'inline-block', 'height': '130px'}),
+        style = {'width': '48%', 'float': 'left', 'display': 'inline-block', 'height': '130px', 'font-family': 'Arial, Helvetica, sans-serif'}),
 
         html.Div([
             html.P(
@@ -124,11 +119,10 @@ app.layout = html.Div([
             dcc.Dropdown(
                 id = 'yaxis-column2',
                 options = [{'label': i, 'value': i} for i in available_indicators],
-                value = available_indicators[0],
-                style = {'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}
+                value = available_indicators[0]
             )
         ],
-        style = {'width': '48%', 'float': 'right', 'display': 'inline-block'})
+        style = {'width': '48%', 'display': 'inline-block', 'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'})
     ], 
         style = {'margin-top': '20px'}
     ),
