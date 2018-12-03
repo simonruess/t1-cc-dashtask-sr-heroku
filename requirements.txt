@@ -5,5 +5,5 @@ dash_core_components
 dash_html_components
 dash-renderer
 dash.ly
-pandas
+pandas>=0.20.0
 flask==0.12.3
