@@ -3,6 +3,7 @@ plotly>=2.0.9
 dash
 dash_core_components
 dash_html_components
+dash-renderer
 dash.ly
 pandas
 flask==0.12.3
