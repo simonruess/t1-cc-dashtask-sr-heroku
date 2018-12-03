@@ -57,7 +57,7 @@ app.layout = html.Div([
                 labelStyle = {'display': 'inline-block'}
             )
         ],
-        style = {'width': '48%', 'float': 'left', 'display': 'inline-block', 'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}),
+        style = {'width': '48%', 'display': 'inline-block', 'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'}),
 
         html.Div([
             html.P(
@@ -75,7 +75,7 @@ app.layout = html.Div([
                 value = 'Linear',
                 labelStyle = {'display': 'inline-block'}
             )
-        ], style = {'width': '48%', 'display': 'inline-block', 'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'})
+        ], style = {'width': '48%', 'float': 'right', 'display': 'inline-block', 'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'})
     ]),
 
     dcc.Graph(id = 'indicator-graphic1'),
@@ -111,7 +111,7 @@ app.layout = html.Div([
                 value = available_countries[0]
             )
         ],
-        style = {'width': '48%', 'float': 'left', 'display': 'inline-block', 'height': '130px', 'font-family': 'Arial, Helvetica, sans-serif'}),
+        style = {'width': '48%', 'display': 'inline-block', 'height': '130px', 'font-family': 'Arial, Helvetica, sans-serif'}),
 
         html.Div([
             html.P(
@@ -124,7 +124,7 @@ app.layout = html.Div([
                 value = available_indicators[0]
             )
         ],
-        style = {'width': '48%', 'display': 'inline-block', 'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'})
+        style = {'width': '48%', 'float': 'right', 'display': 'inline-block', 'font-size': '10px', 'font-family': 'Arial, Helvetica, sans-serif'})
     ], 
         style = {'margin-top': '20px'}
     ),
