@@ -13,6 +13,8 @@ server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 
 app = dash.Dash(__name__, server = server)
 
+app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
+
 data = pd.read_csv('nama_10_gdp/nama_10_gdp_1_Data.csv', error_bad_lines = False, engine = 'python', na_values = [':', 'NaN'])
 
 eu_values = [
