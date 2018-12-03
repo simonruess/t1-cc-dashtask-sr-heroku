@@ -1,10 +1,8 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, State, Output
 import plotly.graph_objs as go
 import pandas as pd
-import flask
 
 server = flask.Flask(__name__)
 server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
@@ -198,4 +196,4 @@ def update_graph(country_name, yaxis_column_name):
     }
 
 if __name__ == '__main__':
-    app.run_server()
+    app.server.run(debug = True, threaded = True)
