@@ -1,7 +1,3 @@
-import os
-from random import randint
-
-import flask
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -144,7 +140,9 @@ app.layout = html.Div([
      dash.dependencies.Input('yaxis-type1', 'value'),
      dash.dependencies.Input('year--slider1', 'value')])
 
-def update_graph(xaxis_column_name, yaxis_column_name, xaxis_type, yaxis_type, year_value):
+def update_graph(xaxis_column_name, yaxis_column_name,
+                 xaxis_type, yaxis_type,
+                 year_value):
     dff = data[data['TIME'] == year_value]
     
     return {
@@ -198,4 +196,4 @@ def update_graph(country_name, yaxis_column_name):
     }
 
 if __name__ == '__main__':
-    app.server.run(debug = True, threaded = True)
+    app.run_server()
